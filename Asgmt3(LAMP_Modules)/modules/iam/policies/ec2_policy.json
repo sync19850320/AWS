@@ -1,0 +1,19 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action":[
+            "s3:ListBucket",
+            "ec2:DescribeInstances",
+            "ec2:DescribeSecurityGroups"
+            ],
+            "Effect": "Allow",
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:ResourceTag/Environment": "${environment}"
+                }
+            }
+        }
+    ]
+}
