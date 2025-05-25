@@ -28,3 +28,11 @@ variable "ec2_policy_statements" {
         }
     ]
 }
+
+variable "assume_role_policy" {
+    type = string
+}
+
+variable "policy_document" {
+    type = string
+}

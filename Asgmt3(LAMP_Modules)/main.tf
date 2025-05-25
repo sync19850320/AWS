@@ -20,6 +20,8 @@ module "iam" {
 
     environment = var.environment
     project_name = var.project_name
+    assume_role_policy = data.aws_iam_policy_document.assume_role_policy.json
+    policy_document = data.aws_iam_policy_document.inline_policy.json
 }
 
 #EC2
